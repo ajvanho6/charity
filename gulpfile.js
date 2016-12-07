@@ -80,7 +80,7 @@ gulp.task('svgmin', function() {
 gulp.task('browser-sync', function() {
     browserSync.init(null, {
         server: {
-            baseDir: "templates"
+            baseDir: "./"
         }
     });
 });
