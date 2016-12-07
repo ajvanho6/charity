@@ -1,0 +1,33 @@
+{
+  "devDependencies": {
+    "browser-sync": "2.6.5",
+    "gulp": "3.8.10",
+    "gulp-autoprefixer": "1.0.1",
+    "gulp-concat": "2.4.0",
+    "gulp-imagemin": "2.4.0",
+    "gulp-livereload": "2.1.1",
+    "gulp-minify-css": "1.1.0",
+    "gulp-newer": "0.3.0",
+    "gulp-rename": "1.2.0",
+    "gulp-sass": "2.1.0",
+    "gulp-sourcemaps": "1.5.2",
+    "gulp-svgmin": "0.4.8",
+    "gulp-uglify": "0.1.0",
+    "gulp-watch": "1.1.0",
+    "run-sequence": "1.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ajvanho6/charity.git"
+  },
+  "scripts": {
+    "postinstall": "find node_modules/ -name \"*.info\" -type f -delete"
+  },
+  "name": "charity-git",
+  "description": "Charity theme for drupal themer",
+  "homepage": "https://github.com/ajvanho6/charity#readme",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "author": "Ivan Baresic",
+  "license": "ISC"
+}
