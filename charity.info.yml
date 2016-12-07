@@ -1,12 +1,12 @@
-# Define Atlas theme.
-name: Atlas
+# Define Charity theme.
+name: Charity
 description: A starter theme for Drupal 8.
 type: theme
 core: 8.x
 # Add libraries.
 libraries:
-  - atlas/global-css
-  - atlas/global-js
+  - charity/global-css
+  - charity/global-js
 # Remove stylesheets.
 stylesheets-remove:
   - core/assets/vendor/normalize-css/normalize.css
