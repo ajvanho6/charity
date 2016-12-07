@@ -12,6 +12,12 @@ var cssmin = require('gulp-minify-css');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var runSequence = require('run-sequence');
+var browserSync = require('browser-sync');
+var postcss = require('gulp-postcss');
+var rucksack = require('rucksack-css');
+var pxtorem = require('postcss-pxtorem');
+var vr = require('postcss-vertical-rhythm');
+var simpleGrid = require('postcss-simple-grid');
 
 // paths
 var imgSrc = './images/src/*';
@@ -22,6 +28,20 @@ var sassSrc = './scss/**/*.scss';
 var sassDest = './css';
 
 gulp.task('sass', function () {
+    var processors = [
+      simpleGrid({separator: '--'}),
+      rucksack({fallbacks:true,autoprefixer:true}),
+      pxtorem({
+        rootValue: 16,
+        unitPrecision: 5,
+        propWhiteList: ['font', 'font-size', 'line-height', 'letter-spacing'],
+        selectorBlackList: [],
+        replace: true,
+        mediaQuery: false,
+        minPixelValue: 0
+      }),
+      vr
+    ];  
 gulp.src(sassSrc)
   .pipe(sourcemaps.init())
   .pipe(sass({
@@ -29,6 +49,7 @@ gulp.src(sassSrc)
     }))
   .pipe(autoprefixer('last 2 version'))
   .pipe(sourcemaps.write())
+  .pipe(postcss(processors))
   .pipe(gulp.dest(sassDest));
 });
 
@@ -55,6 +76,19 @@ gulp.task('svgmin', function() {
     .pipe(gulp.dest(svgDest));
 });
 
+//browser sync
+gulp.task('browser-sync', function() {
+    browserSync.init(null, {
+        server: {
+            baseDir: "templates"
+        }
+    });
+});
+
+gulp.task('bs-reload', function () {
+    browserSync.reload();
+});
+
 // Run tasks without watching.
 gulp.task('build', function(callback) {
   runSequence('sass', 'imagemin', 'svgmin', 'cssmin', callback);
@@ -69,5 +103,5 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', function(callback) {
-  runSequence('sass', 'imagemin', 'svgmin', 'cssmin', 'watch', callback);
+  runSequence('sass', 'imagemin', 'svgmin', 'cssmin', 'watch','browser-sync', callback);
 });
