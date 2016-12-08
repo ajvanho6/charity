@@ -26,6 +26,11 @@ a:hover{
 	text-transform:uppercase;
 }
 
+main{
+	max-width:1440px;
+	margin:0 auto;
+}
+
 /*MENU*/
 .c-menu-main{
 
@@ -36,7 +41,32 @@ a:hover{
 
 /*SECTION BLOG*/
 .blog{
-	
+	background:$white;
+	h1{
+	  text-align:center;
+	}
+	h2{
+		color:$cyen;
+		font-size:20px;
+		font-family:$open;
+	}
+	&__slider__item{
+
+		&__content{
+			padding:1rem 0px 2rem 0px;
+			border-top:1px solid $border;
+			border-bottom:1px solid $border;
+		}
+
+		&__content p{
+			font-family:$open;
+		}
+
+		&__time{
+			display:block;
+			padding:1rem 0px 2rem 0px;
+		}
+	}
 }
 
 /*FOOTER*/
