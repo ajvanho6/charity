@@ -22,6 +22,9 @@ a:hover{
 	justify-content:center;
 	align-items: center;
 }
+.upper{
+	text-transform:uppercase;
+}
 
 /*MENU*/
 .c-menu-main{
@@ -29,6 +32,11 @@ a:hover{
 	&__item{
 		display: inline-block;
 	}
+}
+
+/*SECTION BLOG*/
+.blog{
+	
 }
 
 /*FOOTER*/
