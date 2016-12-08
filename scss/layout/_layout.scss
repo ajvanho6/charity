@@ -9,10 +9,68 @@ ul{
 	list-style-type: none;
 }
 
+a{
+	text-decoration:none;
+}
+
+a:hover{
+	cursor:pointer;
+}
+
+.centering{
+	display:flex;
+	justify-content:center;
+	align-items: center;
+}
+
 /*MENU*/
 .c-menu-main{
-	
+
 	&__item{
 		display: inline-block;
+	}
+}
+
+/*FOOTER*/
+.footer{
+	background:$footer-c;
+	text-align:center;
+	padding:0 80px;
+
+	&__social{
+		height:140px;
+		@extend .centering;
+		border-bottom:1px solid $border;
+
+		&__item{
+			display: inline-block;
+			margin-right:20px;
+		}
+
+		&__item:last-child{
+			margin-right:0;
+		}
+
+		&__item a{
+			display:block;
+		}
+
+		&__item a i{
+			color:$cyen;
+			font-size:20px;
+		}
+	}
+
+	&__bottom{
+		height:120px;
+		@extend .centering;
+
+		p{
+			color:$footer-txt;
+			margin:0;
+		}
+		&__links{
+			color:$cyen;
+		}
 	}
 }
