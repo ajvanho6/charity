@@ -5,8 +5,9 @@
  */
 
 .col {
-    create-column: 0px;
-}
+  float: left;
+  position: relative; }
+
 
 .offset--0 {
   margin-left: 0%; }

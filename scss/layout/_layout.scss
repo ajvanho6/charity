@@ -34,8 +34,13 @@ main{
 
 ul.slick-dots{
 	text-align: center;
+	padding: 3rem 0 2rem 0;
 	li{
 		display: inline-block;
+		margin-right: 8px;
+		&:last-child{
+			margin-right: 0px;
+		}
 	}
 }
 
@@ -51,11 +56,99 @@ ul.slick-dots{
 	top:33%;
 }
 
+.slick-slide img {
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.dot{
+	display: inline-block;
+	width:10px;
+	height: 10px;
+	border-radius: 50%;
+	background:$footer-txt;
+}
+
+.slick-active .dot{
+	background:$cyen;
+}
+
 /*MENU*/
 .c-menu-main{
 
 	&__item{
 		display: inline-block;
+	}
+}
+
+/*SECTION ABOUT*/
+.about{
+	overflow: hidden;
+	padding-top:2em;
+
+	&__description{
+		margin:0 auto;
+		text-align: center;
+		padding-bottom:7rem; 
+
+		h1,h6{
+			color: $heading;
+		}
+
+		h6{
+			font-size: 20px;
+			margin: 0;
+		}
+		p{
+			color:$text;
+		}
+	}
+
+	&__container{
+		background: $white;
+		position: relative;
+		margin:0 auto;
+		text-align: center;
+		padding: 80px 0px 48px 0px;
+		border-radius: 5px;
+		
+		img{
+			position: absolute;
+			margin: 0 auto;
+			left: 0;
+			right: 0;
+			display: block;
+			top:-30%;
+
+		}
+
+		h2{
+			color:$cyen;
+		}
+
+		p{
+			color:$text;
+		}
+	}
+}
+
+
+/*SECTION PARTNERS*/
+.partners{
+	padding-top: 3rem;
+	border-top:1px solid $border;
+	h1{
+	  text-align:center;
+	  margin-bottom: 1.34em;
+	  color: $heading;
+	}
+	&__slider{
+		visibility: hidden;
+
+		&__item{
+
+		}
 	}
 }
 
@@ -65,6 +158,11 @@ ul.slick-dots{
 	padding-top: .67em;
 	h1{
 	  text-align:center;
+	  color:$heading;
+	}
+
+	&__slider{
+		visibility: hidden;
 	}
 
 	&__slider__item{
@@ -150,3 +248,5 @@ ul.slick-dots{
 		}
 	}
 }
+
+.slick-initialized { visibility: visible; }

@@ -38,5 +38,20 @@ $('.blog__slider').slick({
   ]
 });
 
+$('.partners__slider').slick({
+    dots: true,
+    infinite: true,
+    speed: 400,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows:false,
+    customPaging: function(slider, i) {
+      // this example would render "tabs" with titles
+      return '<span class="dot"></span>';
+    },
+
+});
+
+
 });
 
