@@ -8,7 +8,7 @@ var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var svgmin = require('gulp-svgmin');
 var sass = require('gulp-sass');
-var cssmin = require('gulp-minify-css');
+var cleanCSS = require('gulp-clean-css');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var runSequence = require('run-sequence');
@@ -17,7 +17,7 @@ var postcss = require('gulp-postcss');
 var rucksack = require('rucksack-css');
 var pxtorem = require('postcss-pxtorem');
 var vr = require('postcss-vertical-rhythm');
-var simpleGrid = require('postcss-simple-grid');
+/*var simpleGrid = require('postcss-simple-grid');*/
 
 // paths
 var imgSrc = './images/src/*';
@@ -29,7 +29,7 @@ var sassDest = './css';
 
 gulp.task('sass', function () {
     var processors = [
-      simpleGrid({separator: '--'}),
+    /*  simpleGrid({separator: '--'}),*/
       rucksack({fallbacks:true,autoprefixer:true}),
       pxtorem({
         rootValue: 16,
@@ -55,7 +55,7 @@ gulp.src(sassSrc)
 
 gulp.task('cssmin', function() {
   return gulp.src('./css/styles.css')
-    .pipe(cssmin())
+    .pipe(cleanCSS())
     .pipe(rename('styles.min.css'))
     .pipe(gulp.dest(sassDest));
 });

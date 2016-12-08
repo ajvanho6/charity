@@ -1,3 +1,10 @@
+
+/* 
+   ========================================================================== */
+/**
+ * VARIABLES
+ */
+
 $cyen:#5fc0c3;
 $white:#fff;
 $black:#000;
@@ -5,3 +12,32 @@ $footer-c:#454850;
 $footer-txt:#9199b1;
 $gray:#f1f2f5;
 $text:#5a6175;
+
+
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../fonts/OpenSans.eot');
+	src: url('../fonts/OpenSans.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/OpenSans.woff2') format('woff2'),
+		url('../fonts/OpenSans.woff') format('woff'),
+		url('../fonts/OpenSans.ttf') format('truetype'),
+		url('../fonts/OpenSans.svg#OpenSans') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Museo Sans 500';
+	src: url('../fonts/MuseoSans-500.eot');
+	src: url('../fonts/MuseoSans-500.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/MuseoSans-500.woff2') format('woff2'),
+		url('../fonts/MuseoSans-500.woff') format('woff'),
+		url('../fonts/MuseoSans-500.ttf') format('truetype'),
+		url('../fonts/MuseoSans-500.svg#MuseoSans-500') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+$museo:'Museo Sans 500';
+$open:'Open Sans';
