@@ -54,14 +54,24 @@ ul.slick-dots{
 
 .slick-prev.slick-arrow{
 	position: absolute;
-	left: 0;
+	left: 20px;
 	top:33%;
+	z-index: 10;
+
+	@media screen and(min-width: 1281px) {
+		left: 8px;
+	}
 }
 
 .slick-next.slick-arrow{
 	position: absolute;
-	right: 0;
+	right: 20px;
 	top:33%;
+	z-index: 10;
+
+	@media screen and(min-width: 1281px) {
+		right: 8px;
+	}
 }
 
 .slick-slide img {
@@ -80,6 +90,12 @@ ul.slick-dots{
 
 .slick-active .dot{
 	background:$cyen;
+}
+
+.slick-slide{
+	@media screen and(min-width: 1440px) {
+		padding: 0 40px;
+	}
 }
 
 h1 {
@@ -106,6 +122,10 @@ header{
     align-items: center;
     justify-content:space-between;
     padding: 1.25rem 20px;
+
+    @media screen and(min-width: 1440px) {
+		padding: 1.25rem 40px;
+	}
 	
 }  
 
@@ -186,6 +206,10 @@ header{
     margin:0 auto;
     max-width: $max-width;
 
+    @media screen and(min-width: 1440px) {
+		padding: 3rem 40px;
+		}
+
 
 
 	&__container span{
@@ -226,6 +250,10 @@ header{
 		margin:0 auto;
 		max-width: $max-width;
 		padding: 0 20px;
+	@media screen and(min-width: 1440px) {
+		padding: 0px 40px;
+		}
+
 	}
 
 	h1,h2{
@@ -287,6 +315,10 @@ header{
 		max-width: $max-width;
 		margin:0 auto;
 		padding: 0 20px;
+
+	@media screen and(min-width: 1440px) {
+		padding: 0 40px;
+		}
 	}
 
 	&__border{
@@ -359,6 +391,10 @@ header{
 		margin:0 auto;
 		max-width: $max-width;
 		padding: 0 20px;
+
+		@media screen and(min-width: 1440px) {
+		padding: 0 40px;
+		}
 	}
 
 	h1{
@@ -380,6 +416,10 @@ header{
 		max-width:$max-width;
 		margin:0 auto;
 		padding: 0 20px;
+
+		@media screen and(min-width: 1440px) {
+		padding: 0 40px;
+		}
 	}
 	h1{
 	  text-align:center;
@@ -438,6 +478,10 @@ header{
 		padding:0 20px;
 		max-width: $max-width;
 		margin:0 auto;
+
+		@media screen and(min-width: 1440px) {
+		padding: 0 40px;
+		}
 	}
 
 	&__social{
