@@ -136,7 +136,7 @@ header{
 	&__item:last-child a{
 		color:$cyen;
 		border:1px solid $cyen;
-		padding:0.75rem 1rem;
+		padding:0.75rem 1.6rem;
 	}
 
 	&__item a{
@@ -220,7 +220,6 @@ header{
 	&__inner{
 		margin:0 auto;
 		max-width: $max-width;
-		overflow: hidden;
 	}
 
 	h1,h2{
@@ -244,9 +243,13 @@ header{
 
 	&__container p{
 		color:$text;
+		margin-left:auto;
+		margin-right: auto;
+		line-height: 1.5;
 
 		@media screen and(min-width: 992px) {
 			min-height: 40px;
+			max-width: 390px;
 		}
 	}
 
@@ -262,6 +265,12 @@ header{
 		margin-bottom: 2rem;
 	}
 
+	#second p{
+		@media screen and(min-width: 992px) {
+			max-width: 300px;
+		}
+	}
+
 }
 
 /*SECTION ABOUT*/
@@ -271,7 +280,6 @@ header{
 	&__inner{
 		max-width: $max-width;
 		margin:0 auto;
-		overflow: hidden;
 		border-bottom:1px solid $border;
 	}
 

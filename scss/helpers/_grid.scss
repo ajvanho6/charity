@@ -4,9 +4,16 @@
  * GRID
  */
 
+ .row{
+  overflow: hidden;
+  margin:0 -15px;
+ }
+
 .col {
   float: left;
-  position: relative; }
+  position: relative;
+  padding:0 15px;
+}
 
 
 .offset--0 {
