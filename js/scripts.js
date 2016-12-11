@@ -10,7 +10,7 @@ $('.blog__slider').slick({
   nextArrow:"<i class='fa fa-chevron-right slick-next' aria-hidden='true'></i>",
   responsive: [
     {
-      breakpoint: 1280,
+      breakpoint: 1281,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 1,
