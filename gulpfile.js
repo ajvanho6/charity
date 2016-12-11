@@ -103,5 +103,5 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', function(callback) {
-  runSequence('sass', 'imagemin', 'svgmin', 'cssmin', 'watch','browser-sync', callback);
+  runSequence('sass', 'imagemin', 'svgmin', 'cssmin', 'watch','browser-sync','bs-reload', callback);
 });
