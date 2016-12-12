@@ -54,9 +54,13 @@ ul.slick-dots{
 
 .slick-prev.slick-arrow{
 	position: absolute;
-	left: 20px;
+	left: 0px;
 	top:33%;
 	z-index: 10;
+
+	@media screen and(min-width: 992px) {
+		left: 20px;
+	}
 
 	@media screen and(min-width: 1281px) {
 		left: 8px;
@@ -65,9 +69,13 @@ ul.slick-dots{
 
 .slick-next.slick-arrow{
 	position: absolute;
-	right: 20px;
+	right: 10px;
 	top:33%;
 	z-index: 10;
+
+	@media screen and(min-width: 992px) {
+		right: 20px;
+	}
 
 	@media screen and(min-width: 1281px) {
 		right: 8px;
@@ -176,23 +184,58 @@ header{
 	    top: 50%;
   		left: 50%;
   		transform: translate(-50%, -50%);
+
+  		@media screen and(min-width: 768px) {
+			width: 100%;
+			padding: 0 60px;
+		}
+
+  		@media screen and(min-width: 1024px) {
+			width: 65%;
+			padding: 0;
+		}
+
+  		@media screen and(min-width: 1280px) {
+			width: auto;
+		}
 	}
 	&__inner h1{
 		color:$white;
 		font-size: 2rem;
+		margin: 1.5rem 0;
+
+		@media screen and(min-width: 1024px) {
+			margin: 2rem 0;
+		}
 		
 		@media screen and(min-width: 1281px) {
-		font-size: 3rem;
+			font-size: 3rem;
 		}
 	}
 	&__inner h2{
 		color:$white;
-		line-height: 1.5;
+		line-height: 1.15;
+		font-size: 1rem;
+
+		@media screen and(min-width: 1024px) {
+			font-size: 1.25rem;
+		}
+
+		@media screen and(min-width: 1280px) {
+			font-size: 1.5rem;
+			line-height: 1.5;
+		}
 	}
 	&__inner p{
 		color:$white;
 		padding: 0 65px;
-		line-height: 1.5;
+		line-height: 1.15;
+		font-size: 0.875rem;
+
+		@media screen and(min-width: 1024px) {
+			font-size: 1rem;
+			line-height: 1.5;
+		}
 
 	}
 }
@@ -265,7 +308,7 @@ header{
 
 	&__container--margin { 
 
-		@media screen and(min-width: 992px) {
+		@media screen and(min-width: 768px) {
 			min-height: 112px;
 		}
 		
@@ -356,6 +399,10 @@ header{
 		min-height: 200px;
 
 		@media screen and(min-width: 768px) {
+			min-height: 200px;
+		}
+
+		@media screen and(min-width: 1024px) {
 			min-height: 220px;
 		}
 
@@ -436,8 +483,16 @@ header{
 			padding:1rem 0px 2rem 0px;
 			border-top:1px solid $border;
 			border-bottom:1px solid $border;
-			max-width: 300px;
+			max-width: 200px;
 			margin:0 auto;
+
+			@media screen and(min-width: 1024px) {
+				max-width: 240px;
+			}
+
+			@media screen and(min-width: 1280px) {
+				max-width: 300px;
+			}
 
 			@media screen and(min-width: 1440px) {
 				max-width: 325px;
@@ -458,11 +513,19 @@ header{
 
 		&__time{
 			display:block;
-			padding:1rem 0px 2rem 0px;
+			padding:1rem 0px 1.5rem 0px;
 			font-size: 1rem;
 			font-family:$open;
-			max-width: 300px;
+			max-width: 200px;
 			margin:0 auto;
+
+			@media screen and(min-width: 1024px) {
+				max-width: 240px;
+			}
+
+			@media screen and(min-width: 1280px) {
+				max-width: 300px;
+			}
 		}
 
 	}
@@ -485,7 +548,7 @@ header{
 	}
 
 	&__social{
-		height:140px;
+		height:80px;
 		@extend .centering;
 		border-bottom:1px solid $border;
 
@@ -509,7 +572,7 @@ header{
 	}
 
 	&__bottom{
-		height:120px;
+		height:60px;
 		@extend .centering;
 
 		p{
@@ -523,3 +586,10 @@ header{
 }
 
 .slick-initialized { visibility: visible; }
+
+
+@media screen and(max-width: 800px) {
+	p{
+		font-size: .875rem;
+	}
+}
