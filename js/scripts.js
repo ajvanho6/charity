@@ -19,7 +19,7 @@ $('.blog__slider').slick({
       }
     },
     {
-      breakpoint: 600,
+      breakpoint: 736,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 1

@@ -126,10 +126,13 @@ header{
 	margin:0 auto;
 	width: 100%;
 	height: 100%;
-	display: flex;
-    align-items: center;
-    justify-content:space-between;
-    padding: 1.25rem 20px;
+	padding: 1.25rem 20px;
+
+    @media screen and(min-width: 570px) {
+		display: flex;
+	    align-items: center;
+	    justify-content:space-between;
+	}
 
     @media screen and(min-width: 1440px) {
 		padding: 1.25rem 40px;
@@ -144,13 +147,22 @@ header{
 	display: block;
 	width: 154px;
 	height: 25px;
+	margin:0 auto;
+
+	@media screen and(min-width: 570px) {
+		margin:auto;
+	}
 
 	}
 }
 
 
 .c-menu-main{
-	
+		text-align: center;
+
+	@media screen and(min-width: 570px) {
+		text-align: left;
+	}
 
 	&__item{
 		display: inline-block;
@@ -170,6 +182,13 @@ header{
 	&__item a{
 		color:$text;
 		display: block;
+		font-size: .875rem;
+    	padding: 16px 0px;
+
+    	@media screen and(min-width: 420px) {
+			font-size: 1rem;
+    		padding: 0px;
+		}
 	}
 
 }
@@ -177,6 +196,27 @@ header{
 /*SECTION HERO*/
 .hero{
 	position: relative;
+	@media screen and(max-width: 420px) {
+		overflow: hidden;
+	}
+
+	#hero-image{
+		min-height: 232px;
+	    margin-left: -50%;
+	    width: 640px;
+	    max-width: none;
+
+		@media screen and(min-width: 420px) {
+			min-height: 250px;
+			margin-left: 0;
+			width: auto;
+			max-width: 100%;
+		}
+
+		@media screen and(min-width: 481px) {
+			min-height: 0;
+		}
+	}
 	&__inner{
 	    position: absolute;
 	    margin: 0 auto;
@@ -184,9 +224,10 @@ header{
 	    top: 50%;
   		left: 50%;
   		transform: translate(-50%, -50%);
+  		width: 100%;
+  		padding: 0 20px;
 
   		@media screen and(min-width: 768px) {
-			width: 100%;
 			padding: 0 60px;
 		}
 
@@ -201,8 +242,12 @@ header{
 	}
 	&__inner h1{
 		color:$white;
-		font-size: 2rem;
+		font-size: 1.5rem;
 		margin: 1.5rem 0;
+
+		@media screen and(min-width: 568px) {
+			font-size: 2rem;
+		}
 
 		@media screen and(min-width: 1024px) {
 			margin: 2rem 0;
@@ -231,6 +276,11 @@ header{
 		padding: 0 65px;
 		line-height: 1.15;
 		font-size: 0.875rem;
+		display: none;
+
+		@media screen and(min-width: 420px) {
+			display: block;
+		}
 
 		@media screen and(min-width: 1024px) {
 			font-size: 1rem;
@@ -243,15 +293,20 @@ header{
 /*SECTION EVENT*/
 .event{
 	padding: 3rem 20px;
-	display: flex;
-    align-items: center;
-    justify-content:space-between;
     margin:0 auto;
     max-width: $max-width;
+    width: 100%;
+
+    @media screen and(min-width: 420px) {
+		display: flex;
+    	align-items: center;
+    	justify-content:space-between;
+    	width: auto;
+	}
 
     @media screen and(min-width: 1440px) {
 		padding: 3rem 40px;
-		}
+	}
 
 
 
@@ -268,7 +323,10 @@ header{
 	&__container h6{
 		color:$heading;
     	margin: 0;
-    	font-size: 1rem;
+    	font-size: .875rem;
+		@media screen and(min-width: 736px) {
+			font-size: 1rem;
+		}
 	}
 
 	&__register {
@@ -278,6 +336,14 @@ header{
 		text-transform: uppercase;
 		font-size: 1.25rem;
 		padding: .75rem;
+		display: block;
+	    max-width: 116px;
+	    margin: 32px auto 0 auto;
+
+	    @media screen and(min-width: 420px) {
+			max-width: none;
+	    	margin: auto;
+		}
 		
 	}
 }
@@ -373,7 +439,12 @@ header{
 	&__description{
 		margin:0 auto;
 		text-align: center;
-		padding-bottom:7rem; 
+		padding-bottom:5rem; 
+
+		@media screen and(min-width: 992px) {
+			padding-bottom:7rem;
+		}
+
 
 		h1,h6{
 			color: $heading;
@@ -425,6 +496,11 @@ header{
 			color:$text;
 			max-width: 360px;
     		margin: 0 auto;
+    		padding: 0 10px;
+
+    		@media screen and(min-width: 992px) {
+				padding: 0;
+			}
 		}
 	}
 }
@@ -483,8 +559,12 @@ header{
 			padding:1rem 0px 2rem 0px;
 			border-top:1px solid $border;
 			border-bottom:1px solid $border;
-			max-width: 200px;
+			max-width: 180px;
 			margin:0 auto;
+
+			@media screen and(min-width: 481px) {
+				max-width: 200px;
+			}
 
 			@media screen and(min-width: 1024px) {
 				max-width: 240px;
@@ -501,23 +581,36 @@ header{
 
 		&__content h2{
 			color:$cyen;
-			font-size:1rem;
 			font-family:$open;
 			font-weight:600;
+			font-size: .875rem;
+
+			@media screen and(min-width: 481px) {
+				font-size: 1rem;
+			}
 		}
 
 		&__content p{
 			font-family:$open;
-			font-size: 1rem;
+			font-size: .875rem;
+
+			@media screen and(min-width: 481px) {
+				font-size: 1rem;
+			}
 		}
 
 		&__time{
 			display:block;
 			padding:1rem 0px 1.5rem 0px;
-			font-size: 1rem;
+			font-size: .875rem;
 			font-family:$open;
-			max-width: 200px;
+			max-width: 180px;
 			margin:0 auto;
+
+			@media screen and(min-width: 481px) {
+				max-width: 200px;
+				font-size: 1rem;
+			}
 
 			@media screen and(min-width: 1024px) {
 				max-width: 240px;
