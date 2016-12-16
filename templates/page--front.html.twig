@@ -59,48 +59,215 @@
  * @ingroup themeable
  */
 #}
-<div class="layout-container">
-  <header role="banner">
-    {% if logo %}
-      <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">
-        <img src="{{ logo }}" alt="{{ 'Home'|t }}"/>
-      </a>
-    {% endif %}
-    {{ page.header }}
-    {{ page.primary_menu }}
-  </header>
-  {{ page.highlighted }}
 
-  <main role="main">
-    <div class="layout-content">
 
-      {{ tabs }}
+<header>
+<div class="header__inner">
+<a href="#" class="logo"><img src="{{ base_path ~ directory }}/images/OpenCharity.svg"></a>
+  {{ page.header }}
+  {{ page.primary_menu }}
+</div>
+</header>
 
-      {% if action_links %}
-        <nav class="action-links">{{ action_links }}</nav>
-      {% endif %}
+<section class="hero">
+{{ page.hero}}
+</section>
 
-      {{ page.content }}
-    </div>{# /.layout-content #}
+<main role="main">
+<section class="event">
+	<div class="event__container">
+		<span>Next Event:</span>
+		{{ page.event}}
+	</div>
+	<a class="event__register" href="#">Register</a>
+</section>
 
-    {% if page.sidebar_first %}
-      <aside class="layout-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
-      </aside>
-    {% endif %}
+<section class="clients">
+	<div class="clients__inner">
+	<div class="row">
+	<h1 class="upper">Get Involved</h1>
+		<div class="col sm--12 md--3">
+			<div class="clients__container">
+			<div class="clients__container--margin">
+				<img src="{{ base_path ~ directory }}/images/Meetup.png" alt="">
+			</div>	
+				<h2>We Do Meetings</h2>
+				<p>We organise our meetings through the OpenCharity MeetUp group</p>
+				<a href="#">Meetup Group</a>
+			</div>	
+		</div>
 
-    {% if page.sidebar_second %}
-      <aside class="layout-sidebar-second" role="complementary">
-        {{ page.sidebar_second }}
-      </aside>
-    {% endif %}
+		<div class="col sm--12 md--3">
+			<div class="clients__container" id="second">
+			<div class="clients__container--margin">
+				<img src="{{ base_path ~ directory }}/images/Slack.png" alt="">
+			</div>		
+				<h2>We Collaborate</h2>
+				<p>OpenCharity have a slack group for
+					daily collaboration</p>
+				<a href="#">Slack Group</a>
+			</div>	
+		</div>
 
-  </main>
+		<div class="col sm--12 md--3">
+			<div class="clients__container">
+			<div class="clients__container--margin">
+				<img src="{{ base_path ~ directory }}/images/screen.png" alt="">
+			</div>	
+				<h2>We share</h2>
+				<p>We have a Google Group set up to share tools
+and documents</p>
+				<a href="#">Google Group</a>
+			</div>	
+		</div>
+		</div>
+		</div>
+	</section>
 
-  {% if page.footer %}
-    <footer role="contentinfo">
+	<!--ABOUT-->
+	<section class="about">
+	<div class="about__inner">
+	<div class="row">
+		<div class="col sm--12">
+		<div class="about__description">
+			<h1 class="upper">Our mission</h1>
+			<p>Charities and Partners collaborating and sharing open solutions and ideas to create value in the digital space.</p>
+			<h6>If you are a charity or a supplier, we are ready to welcome you.</h6>
+			</div>
+		</div>
+		<div class="col sm--12 md--3">
+			<div class="about__container">
+				<img src="{{ base_path ~ directory }}/images/Icon-1.png" alt="">
+				<h2>We help charities</h2>
+				<p>share knowledge and working practice to make the best technology choices.</p>
+			</div>
+		</div>
+
+		<div class="col sm--12 md--3">
+			<div class="about__container">
+				<img src="{{ base_path ~ directory }}/images/Icon-2.png" alt="">
+				<h2>We bring together</h2>
+				<p>charities and suppliers to the charity sector to share best practices.</p>
+			</div>
+		</div>
+
+		<div class="col sm--12 md--3">
+			<div class="about__container">
+				<img src="{{ base_path ~ directory }}/images/Icon-3.png" alt="">
+				<h2>We encourage</h2>
+				<p>collaboration and innovation for the good of the charity sector.</p>
+			</div>
+		</div>
+		<div class="col sm--12">
+			<div class="about__border"></div>
+		</div>
+	</div>	
+	</div>
+	</section>
+	<!--END ABOUT-->
+	
+	<!--PARTNERS-->
+	<section class="partners">
+	<div class="partners__inner">
+		<h1 class="upper">Our Members</h1>
+		<div class="partners__slider">
+			<div class="partners__item">
+				<img src="{{ base_path ~ directory }}/images/Partners.png" alt="">
+			</div>
+
+			<div class="partners__item">
+				<img src="{{ base_path ~ directory }}/images/Partners.png" alt="">
+			</div>
+
+			<div class="partners__item">
+				<img src="{{ base_path ~ directory }}/images/Partners.png" alt="">
+			</div>
+
+		</div>
+	</div>
+	</section>
+	<!--END PARTNERS-->
+
+	<!--BLOG-->
+	<section class="blog">
+	<div class="blog__inner">
+	<div class="row">
+	<h1 class="upper">Blog</h1>
+		<div class="blog__slider">
+		<!--item-->
+		  <div class="blog__slider__item">
+		  <div class="blog__slider__item__content">
+		   <h2>Online Donations Special...</h2>
+		  	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+		  </div>
+		  	<span class="blog__slider__item__time">14 Nov 2014</span>
+		  </div>
+		<!--end item-->
+
+		<!--item-->
+		  <div class="blog__slider__item">
+		  <div class="blog__slider__item__content">
+		   <h2>Online Donations Special...</h2>
+		  	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+		  </div>
+		  	<span class="blog__slider__item__time">14 Nov 2014</span>
+		  </div>
+		<!--end item-->
+
+		<!--item-->
+		  <div class="blog__slider__item">
+		  <div class="blog__slider__item__content">
+		   <h2>Online Donations Special...</h2>
+		  	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+		  </div>
+		  	<span class="blog__slider__item__time">14 Nov 2014</span>
+		  </div>
+		<!--end item-->
+
+		<!--item-->
+		  <div class="blog__slider__item">
+		  <div class="blog__slider__item__content">
+		   <h2>Online Donations Special...</h2>
+		  	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+		  </div>
+		  	<span class="blog__slider__item__time">14 Nov 2014</span>
+		  </div>
+		<!--end item-->
+
+		<!--item-->
+		  <div class="blog__slider__item">
+		  <div class="blog__slider__item__content">
+		   <h2>Online Donations Special...</h2>
+		  	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+		  </div>
+		  	<span class="blog__slider__item__time">14 Nov 2014</span>
+		  </div>
+		<!--end item-->
+		</div>
+		</div>
+		</div>	
+	</section>
+	<!--END BLOG-->
+</main>
+
+{% if page.footer %}
+   <footer class="footer" role="contentinfo">
+    <div class="footer__inner">
       {{ page.footer }}
-    </footer>
-  {% endif %}
+      <ul class="footer__social">
+		<li class="footer__social__item"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+		<li class="footer__social__item"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+		<li class="footer__social__item"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+	</ul>
+	<div class="footer__bottom">
+		<p>This site was built as a collaboration between <a class="footer__bottom__links" href="#">Manifesto Digital</a> and <a class="footer__bottom__links" href="#">Compucorp</a></p>
+	</div>
+     </div> 
+  </footer>
+{% endif %}
 
-</div>{# /.layout-container #}
+
+
+
+
+

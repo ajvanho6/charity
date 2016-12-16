@@ -5,5 +5,10 @@ global-css:
 
 global-js:
   js:
+    js/slick.js: {}
     js/scripts.js: {}
+
+    dependencies:
+    - core/jquery
+ 
 

@@ -14,3 +14,11 @@ stylesheets-remove:
   - core/modules/system/css/system.theme.css
   - core/modules/views/css/views.module.css
 # Add your regions below. Defaults to those defined in Drupal core.
+# Define regions
+regions:
+  header: 'Header'
+  hero: 'Hero'
+  event: 'Event'
+  clients: 'Clients'
+  content: 'Main content'
+  footer: 'Footer'

@@ -1,4 +1,4 @@
-$(document).ready(function(){
+(function ($) {
 
 $('.blog__slider').slick({
   dots: false,
@@ -53,5 +53,5 @@ $('.partners__slider').slick({
 });
 
 
-});
+})(jQuery);
 

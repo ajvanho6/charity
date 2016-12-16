@@ -529,10 +529,11 @@ header{
 
 /*SECTION BLOG*/
 .blog{
-	background:$white;
+	background:$gray;
 	padding-top: .67em;
 
 	&__inner{
+		background:$white;
 		max-width:$max-width;
 		margin:0 auto;
 		padding: 0 20px;
